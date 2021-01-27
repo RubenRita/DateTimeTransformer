@@ -73,21 +73,21 @@ namespace InterviewProject.DataHelper
         }  
 
         // Verify if templateValue has Last & First and convert to LowerCase 
-        public static string Verify_If_Last_Or_First(string templateValue)
+        private static string Verify_If_Last_Or_First(string templateValue)
         {
             string first_or_last = Regex.Replace(templateValue, @"[^A-Za-z]+", String.Empty);
             return first_or_last.ToLower();
         }
 
         // Verify if TemplateValues has numbers
-        public static bool Verify_Template_Value_Has_Numbers(string templateValue)
+        private static bool Verify_Template_Value_Has_Numbers(string templateValue)
         {          
-            bool containsNum = System.Text.RegularExpressions.Regex.IsMatch(templateValue, @"\d");
+            bool containsNum = Regex.IsMatch(templateValue, @"\d");
             return containsNum;
         }
 
         // Get Numbers from TemplateValue
-        public static string getNumbers(string templateValue)
+        private static string getNumbers(string templateValue)
         {
             string getNum = Regex.Match(templateValue, @"\-*\d+").Value;
             return getNum;
