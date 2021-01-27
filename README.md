@@ -1,36 +1,19 @@
-.NET Core Home
-The dotnet/core repository is a good starting point for .NET Core.
+.NET CORE -> Job Interview 
 
-The latest major release is .NET 5.0. The latest patch updates are listed in .NET Core release notes.
+Each traveler has a personalized overview of their upcoming trips. These trip items are supported with a notification to provide more relative content to the traveler.
+The responsibility of DateTimeTransformer is to determine the send date and time when a push notification should be sent.
 
-.NET Core Releases
-Download the latest .NET Core SDK
-.NET Core releases
-.NET Core daily builds
-Learn about .NET Core
-Learn about .NET Core
-.NET Core Roadmap
-Learn about the .NET platform
-.NET Core release notes
-.NET Core Announcements
-.NET Core blog
-Getting help
-File an issue
-Ask on Stack Overflow
-Contact Microsoft Support
-VS Developer Community Portal for .NET Framework feedback (or via Report a Problem tool)
-How to Engage, Contribute and Provide Feedback
-The .NET Core team encourages contributions, both issues and PRs. The first step is finding the .NET Core repository that you want to contribute to.
+GIVEN
+  - PointDate – contains the given start and end date and time of a trip item
+  - TemplateValue – contains the indicator like 'first' and added minutes or 'end' and added minutes
+GOAL
+  - Implement business logic in the most efficient way and make all tests pass.
+  - Unit tests are written and should not be changed.
+EXAMPLES
+  - When a trip item starts at 2019-04-01 12:00 and ends at 2019-04-01 18:00 and the given template value is ‘last’, a push notification should be sent on the last date and time of the trip item and thus 2019-04-01 18:00.
+  - When a trip item starts at 2019-04-01 12:00 and ends at 2019-04-01 18:00 and the given
+template value is ‘first+2880’, a push notification should be sent on the first date and time of the trip item plus 2880 minutes and thus 2019-04-03 12:00.
 
-Check the product roadmap to see what the team is focusing on.
+The dotnet/core 2.2 repository is a good starting point for .NET Core.
 
-Community
-This project uses the .NET Foundation Code of Conduct to define expected conduct in our community. Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting a project maintainer at conduct@dotnetfoundation.org.
 
-.NET Foundation
-The .NET Core platform is part of the .NET Foundation.
-
-Licenses
-.NET Core repos typically use either the MIT or Apache 2 licenses for code. Some projects license documentation and other forms of content under Creative Commons Attribution 4.0.
-
-See specific repos to understand the license used.
